@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitor</title>
+  </head>
+  <body>
+    <h1>Machine Learning Model Deployment</h1>
+    <form action="/predict" method="post">
+      <label for="duration">Duration:</label>
+      <input type="number" id="duration" name="duration" required /><br />
+
+      <label for="src_bytes">Source Bytes:</label>
+      <input type="number" id="src_bytes" name="src_bytes" required /><br />
+
+      <label for="dst_bytes">Destination Bytes:</label>
+      <input type="number" id="dst_bytes" name="dst_bytes" required /><br />
+
+      <label for="land">Land:</label>
+      <input type="number" id="land" name="land" required /><br />
+
+      <label for="wrong_fragment">Wrong Fragment:</label>
+      <input
+        type="number"
+        id="wrong_fragment"
+        name="wrong_fragment"
+        required
+      /><br />
+
+      <label for="urgent">Urgent:</label>
+      <input type="number" id="urgent" name="urgent" required /><br />
+
+      <label for="hot">hot:</label>
+      <input type="number" id="hot" name="hot" required /><br />
+
+      <label for="num_failed_logins">Number of Failed Logins:</label>
+      <input
+        type="number"
+        id="num_failed_logins"
+        name="num_failed_logins"
+        required
+      /><br />
+
+      <label for="logged_in">Logged in:</label>
+      <input type="number" id="logged_in" name="logged_in" required /><br />
+
+      <label for="num_compromised">Num Compromised:</label>
+      <input
+        type="number"
+        id="num_compromised"
+        name="num_compromised"
+        required
+      /><br />
+
+      <label for="root_shell">Root Shell:</label>
+      <input type="number" id="root_shell" name="root_shell" required /><br />
+
+      <label for="su_attempted">SU Attempted:</label>
+      <input
+        type="number"
+        id="su_attempted"
+        name="su_attempted"
+        required
+      /><br />
+
+      <label for="num_root">Num Root:</label>
+      <input type="number" id="num_root" name="num_root" required /><br />
+
+      <label for="num_file_creations">Number of File Creations:</label>
+      <input
+        type="number"
+        id="num_file_creations"
+        name="num_file_creations"
+        required
+      /><br />
+
+      <label for="num_shells">Number of Shells:</label>
+      <input type="number" id="num_shells" name="num_shells" required /><br />
+
+      <label for="num_access_files">num_access_files:</label>
+      <input
+        type="number"
+        id="num_access_files"
+        name="num_access_files"
+        required
+      /><br />
+
+      <label for="num_outbound_cmds">num_outbound_cmds:</label>
+      <input
+        type="number"
+        id="num_outbound_cmds"
+        name="num_outbound_cmds"
+        required
+      /><br />
+
+      <label for="is_host_login">is_host_login:</label>
+      <input
+        type="number"
+        id="is_host_login"
+        name="is_host_login"
+        required
+      /><br />
+
+      <label for="is_guest_login">is_guest_login:</label>
+      <input
+        type="number"
+        id="is_guest_login"
+        name="is_guest_login"
+        required
+      /><br />
+
+      <label for="count">count:</label>
+      <input type="number" id="count" name="count" required /><br />
+
+      <label for="srv_count">srv_count:</label>
+      <input type="number" id="srv_count" name="srv_count" required /><br />
+
+      <label for="serror_rate">serror_rate:</label>
+      <input
+        type="number"
+        id="serror_rate"
+        name="serror_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="srv_serror_rate">srv_serror_rate:</label>
+      <input
+        type="number"
+        id="srv_serror_rate"
+        name="srv_serror_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="rerror_rate">rerror_rate:</label>
+      <input
+        type="number"
+        id="rerror_rate"
+        name="rerror_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="srv_rerror_rate">srv_rerror_rate:</label>
+      <input
+        type="number"
+        id="srv_rerror_rate"
+        name="srv_rerror_rate"
+        step="any"
+        required
+      /><br/>
+
+      <label for="same_srv_rate">same_srv_rate:</label>
+      <input
+        type="number"
+        id="same_srv_rate"
+        name="same_srv_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="diff_srv_rate">diff_srv_rate:</label>
+      <input
+        type="number"
+        id="diff_srv_rate"
+        name="diff_srv_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="srv_diff_host_rate">srv_diff_host_rate:</label>
+      <input
+        type="number"
+        id="srv_diff_host_rate"
+        name="srv_diff_host_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="dst_host_count">dst_host_count:</label>
+      <input
+        type="number"
+        id="dst_host_count"
+        name="dst_host_count"
+        required
+      /><br />
+
+      <label for="dst_host_srv_count">dst_host_srv_count:</label>
+      <input
+        type="number"
+        id="dst_host_srv_count"
+        name="dst_host_srv_count"
+        required
+      /><br />
+
+      <label for="dst_host_same_srv_rate">dst_host_count:</label>
+      <input
+        type="number"
+        id="dst_host_same_srv_rate"
+        name="dst_host_same_srv_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="dst_host_diff_srv_rate">dst_host_diff_srv_rate:</label>
+      <input
+        type="number"
+        id="dst_host_diff_srv_rate"
+        name="dst_host_diff_srv_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="dst_host_same_src_port_rate"
+        >dst_host_same_src_port_rate:</label
+      >
+      <input
+        type="number"
+        id="dst_host_same_src_port_rate"
+        name="dst_host_same_src_port_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="dst_host_srv_diff_host_rate"
+        >dst_host_srv_diff_host_rate:</label
+      >
+      <input
+        type="number"
+        id="dst_host_srv_diff_host_rate"
+        name="dst_host_srv_diff_host_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="dst_host_serror_rate">dst_host_serror_rate:</label>
+      <input
+        type="number"
+        id="dst_host_serror_rate"
+        name="dst_host_serror_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="dst_host_srv_serror_rate">dst_host_srv_serror_rate:</label>
+      <input
+        type="number"
+        id="dst_host_srv_serror_rate"
+        name="dst_host_srv_serror_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="dst_host_rerror_rate">dst_host_rerror_rate:</label>
+      <input
+        type="number"
+        id="dst_host_rerror_rate"
+        name="dst_host_rerror_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="dst_host_srv_rerror_rate">dst_host_srv_rerror_rate:</label>
+      <input
+        type="number"
+        id="dst_host_srv_rerror_rate"
+        name="dst_host_srv_rerror_rate"
+        step="0.01"
+        required
+      /><br />
+
+      <label for="protocol_type">Protocol Type:</label>
+      <select id="protocol_type" name="protocol_type">
+        <option value="tcp">TCP</option>
+        <option value="udp">UDP</option>
+        <option value="icmp">ICMP</option>
+        <!-- Add other protocol types as needed --></select
+      ><br />
+
+      <label for="service">Service:</label>
+      <select id="service" name="service">
+        <option value="IRC">IRC</option>
+        <option value="X11">X11</option>
+        <option value="Z39_50">Z39_50</option>
+        <option value="aol">aol</option>
+        <option value="auth">auth</option>
+        <option value="bgp">bgp</option>
+        <option value="courier">courier</option>
+        <option value="csnet_ns">csnet_ns</option>
+        <option value="ctf">ctf</option>
+        <option value="daytime">daytime</option>
+        <option value="discard">discard</option>
+        <option value="domain">domain</option>
+        <option value="domain_u">domain_u</option>
+        <option value="echo">echo</option>
+        <option value="eco_i">eco_i</option>
+        <option value="ecr_i">ecr_i</option>
+        <option value="efs">efs</option>
+        <option value="exec">exec</option>
+        <option value="finger">finger</option>
+        <option value="ftp">FTP</option>
+        <option value="ftp_data">ftp_data</option>
+        <option value="gopher">gopher</option>
+        <option value="harvest">harvest</option>
+        <option value="hostnames">hostnames</option>
+        <option value="http">HTTP</option>
+        <option value="http_2784">http_2784</option>
+        <option value="http_443">http_443</option>
+        <option value="http_8001">http_8001</option>
+        <option value="imap4">imap4</option>
+        <option value="iso_tsap">iso_tsap</option>
+        <option value="klogin">klogin</option>
+        <option value="kshell">kshell</option>
+        <option value="ldap">ldap</option>
+        <option value="link">link</option>
+        <option value="login">login</option>
+        <option value="mtp">mtp</option>
+        <option value="name">name</option>
+        <option value="netbios_dgm">netbios_dgm</option>
+        <option value="netbios_ns">netbios_ns</option>
+        <option value="netbios_ssn">netbios_ssn</option>
+        <option value="netstat">netstat</option>
+        <option value="nnsp">nnsp</option>
+        <option value="nntp">nntp</option>
+        <option value="ntp_u">ntp_u</option>
+        <option value="pm_dump">pm_dump</option>
+        <option value="pop_2">pop_2</option>
+        <option value="pop_3">pop_3</option>
+        <option value="printer">printer</option>
+        <option value="private">private</option>
+        <option value="red_i">red_i</option>
+        <option value="remote_job">remote_job</option>
+        <option value="rje">rje</option>
+        <option value="shell">shell</option>
+        <option value="smtp">smtp</option>
+        <option value="sql_net">sql_net</option>
+        <option value="ssh">ssh</option>
+        <option value="sunrpc">sunrpc</option>
+        <option value="supdup">supdup</option>
+        <option value="systat">systat</option>
+        <option value="telnet">telnet</option>
+        <option value="tftp_u">tftp_u</option>
+        <option value="tim_i">tim_i</option>
+        <option value="time">time</option>
+        <option value="urh_i">urh_i</option>
+        <option value="urp_i">urp_i</option>
+        <option value="uucp">uucp</option>
+        <option value="uucp_path">uucp_path</option>
+        <option value="vmnet">vmnet</option>
+        <option value="whois">whois</option>
+        <option value="other">other</option>
+        <!-- Add other service types as needed --></select
+      ><br />
+
+      <label for="flag">Flag:</label>
+      <select id="flag" name="flag">
+        <option value="OTH">OTH</option>
+        <option value="REJ">REJ</option>
+        <option value="RSTO">RSTO</option>
+        <option value="RSTOS0">RSTOS0</option>
+        <option value="S0">S0</option>
+        <option value="S1">S1</option>
+        <option value="S2">S2</option>
+        <option value="S3">S3</option>
+        <option value="SF">SF</option>
+        <option value="SH">SH</option>
+
+        <!-- Add other flag values as needed --></select
+      ><br />
+
+      <!-- Add input fields for other variables in a similar manner -->
+
+      <button type="submit">Predict</button>
+    </form>
+    <div id="result"></div>
+  </body>
+</html>
